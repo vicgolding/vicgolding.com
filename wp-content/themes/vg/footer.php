@@ -45,8 +45,6 @@
 </footer>
 <div class="subfooter">
     <p>Copyright © Victoria Golding, 2023</p>
-    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-    <div id="wcb" class="carbonbadge"></div>
 </div>
 <?php wp_footer(); ?>
 <script src="https://kit.fontawesome.com/dfe96ba0a1.js" crossorigin="anonymous"></script>

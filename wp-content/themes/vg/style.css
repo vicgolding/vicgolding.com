@@ -297,6 +297,15 @@ header a, footer a, header a:hover, footer a:hover {
 }
 
 /* =================================
+  Mobile Navigation
+==================================== */
+
+#mobile-navigation {
+    width: 100vw;
+}
+
+
+/* =================================
   Subheader
 ==================================== */
 
@@ -391,24 +400,46 @@ header li a:hover {
         display: grid;
     }
 
+    #site-branding, #site-description {
+        text-align: center;
+    }
+
+    #site-description {
+        padding: 0 0 1em 0;
+    }
+
     #footer-navigation {
         display: none;
     }
 
-    .main-footer .menu-item, .main-header .menu-item {
-        padding: 0.5em;
+    .main-header .menu-item {
+        padding: 0 1.5em 0 0;
+    }
+
+    nav#social-media-links .menu-item, nav#footer-navigation .menu-item {
+        padding: 0 0 1em 0;
     }
 
     footer nav {
         text-align: center;
     }
 
-    #site-branding, #site-description {
-        text-align: center;
-    }
 	#main-navigation {
 		display: none;
 	}
+    .wp-block-media-text__media img {
+        padding-bottom: 1em;
+    }
+    div.wp-block-columns.CV-download {
+        gap: 2em;
+        margin: 1em 0 0 1em;
+    }
+    a.roadmap img {
+        max-width: 95vw;
+    }
+    a.treehouse img {
+        max-width: 50vw;
+    }
 }
 
 @media (min-width: 1025px) {
@@ -425,6 +456,9 @@ header li a:hover {
     #footer-navigation {
         display: block;
     }
+    nav#social-media-links .menu-item, nav#footer-navigation .menu-item {
+        padding: 0 0 0.25em 0;
+    }
 	#mobile-navigation {
 		display: none;
 	}
@@ -433,5 +467,8 @@ header li a:hover {
     }
 	.wp-block-columns {
         gap: 2em;
+    }
+    .wp-block-media-text__media img {
+        padding-bottom: 0;
     }
 }
