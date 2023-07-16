@@ -1,0 +1,437 @@
+/*
+Theme Name: Vic Golding
+Theme URI: https://vicgolding.com
+Author: Vic Golding
+Author URI: https://vicgolding.com
+Description: vicgolding
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: vicgolding
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Styles intended only for the front.*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* =================================
+  Base Styles
+==================================== */
+
+/* =================================
+  Fonts
+==================================== */
+
+/* Stora Regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Stora';
+    font-style: normal;
+    font-weight: 400;
+    src: url('resources/fonts/Stora.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Stora Light - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Stora Light';
+    font-style: normal;
+    font-weight: 200;
+    src: url('resources/fonts/Stora-Light.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* bungee-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Bungee';
+    font-style: normal;
+    font-weight: 400;
+    src: url('resources/fonts/bungee-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-200 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200;
+    src: url('resources/fonts/nunito-v25-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-200italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200;
+    src: url('resources/fonts/nunito-v25-latin-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    src: url('resources/fonts/nunito-v25-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-300italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 300;
+    src: url('resources/fonts/nunito-v25-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url('resources/fonts/nunito-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 400;
+    src: url('resources/fonts/nunito-v25-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    src: url('resources/fonts/nunito-v25-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-500italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 500;
+    src: url('resources/fonts/nunito-v25-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    src: url('resources/fonts/nunito-v25-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-600italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 600;
+    src: url('resources/fonts/nunito-v25-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: url('resources/fonts/nunito-v25-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-700italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 700;
+    src: url('resources/fonts/nunito-v25-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    src: url('resources/fonts/nunito-v25-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-800italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 800;
+    src: url('resources/fonts/nunito-v25-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-900 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    src: url('resources/fonts/nunito-v25-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-900italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 900;
+    src: url('resources/fonts/nunito-v25-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* =================================
+  Body
+==================================== */
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    font-family: 'Stora', sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+p, h1, h2, h3 {
+    color: #212529;
+}
+
+a {
+    color: darkcyan;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.wp-element-button, .wp-block-button__link {
+    background-color: darkcyan;
+}
+
+/* =================================
+  Header
+==================================== */
+
+.header-logo {
+    width: 15vw;
+}
+
+header li {
+    display: inline; /* <li> elements are block by default. We remove the line breaks before and after each list item, to display them on one line */
+}
+
+header a, footer a, header a:hover, footer a:hover {
+    text-decoration: none;
+}
+
+/* =================================
+  Subheader
+==================================== */
+
+.subheader {
+    padding: 5vh;
+}
+
+.subheader, .subfooter {
+    background-color: darkcyan;
+    text-align: center;
+}
+
+.subheader h1, .subheader h2, .subheader h3, .subfooter p {
+    color: white;
+}
+
+/* =================================
+  Main
+==================================== */
+
+section.main {
+    padding: 2.5vw;
+}
+
+/* =================================
+  Footer
+==================================== */
+
+.subfooter {
+    padding: 1vh;
+}
+
+footer {
+    border-top: 0.25em solid darkcyan;
+}
+
+footer h2 {
+    font-size: 1.5em;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li a,
+header li a {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+footer li a {
+    /* makes the whole link area clickable & allows us to specify the width etc. */
+    display: block;
+}
+
+footer li a:hover,
+header li a:hover {
+    /* Change the link color on hover */
+    text-decoration: underline;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media screen and (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media (min-width: 375px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    .main-header {
+        padding: 2vh;
+    }
+
+    .main-header, .subheader {
+        display: flex;
+    }
+    .main-header, .subheader {
+        align-items: center;
+        flex-direction: column;
+    }
+    .main-footer {
+        padding: 2vh;
+        display: grid;
+    }
+
+    #footer-navigation {
+        display: none;
+    }
+
+    .main-footer .menu-item, .main-header .menu-item {
+        padding: 0.5em;
+    }
+
+    footer nav {
+        text-align: center;
+    }
+
+    #site-branding, #site-description {
+        text-align: center;
+    }
+	#main-navigation {
+		display: none;
+	}
+}
+
+@media (min-width: 1025px) {
+    .main-footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-header, .main-footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #footer-navigation {
+        display: block;
+    }
+	#mobile-navigation {
+		display: none;
+	}
+    #main-navigation {
+        display: flex;
+    }
+	.wp-block-columns {
+        gap: 2em;
+    }
+}
