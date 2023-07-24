@@ -16,6 +16,26 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/* =================================
+  TABLE OF CONTENTS
+====================================
+
+01. Base Styles
+02. Fonts
+03. Body
+04. Header
+04.1. Subheader
+05. Navigation
+05.1. Mobile Navigation
+06. Footer
+07. Pages
+07.1. Contact
+08. Media Queries
+
+=================================
+  01. Base Styles
+==================================== */
+
 /* Styles intended only for the front.*/
 html {
     scroll-behavior: smooth;
@@ -53,11 +73,7 @@ time, mark, audio, video {
 }
 
 /* =================================
-  Base Styles
-==================================== */
-
-/* =================================
-  Fonts
+  02. Fonts
 ==================================== */
 
 /* Stora Regular - latin */
@@ -232,7 +248,7 @@ time, mark, audio, video {
 }
 
 /* =================================
-  Body
+  03. Body
 ==================================== */
 
 body {
@@ -281,7 +297,7 @@ h3 {
 }
 
 /* =================================
-  Header
+  04. Header
 ==================================== */
 
 .header-logo {
@@ -297,16 +313,7 @@ header a, footer a, header a:hover, footer a:hover {
 }
 
 /* =================================
-  Mobile Navigation
-==================================== */
-
-#mobile-navigation {
-    width: 100vw;
-}
-
-
-/* =================================
-  Subheader
+  04.1. Subheader
 ==================================== */
 
 .subheader {
@@ -323,15 +330,19 @@ header a, footer a, header a:hover, footer a:hover {
 }
 
 /* =================================
-  Main
+  05. Navigation
 ==================================== */
 
-section.main {
-    padding: 2.5vw;
+/* =================================
+  05.1 Mobile Navigation
+==================================== */
+
+#mobile-navigation {
+    width: 100vw;
 }
 
 /* =================================
-  Footer
+  06. Footer
 ==================================== */
 
 .subfooter {
@@ -370,24 +381,32 @@ header li a:hover {
 }
 
 /* =================================
-  Media Queries
+  07. Pages
+==================================== */
+
+section.main {
+    padding: 2.5vw;
+}
+
+/* =================================
+  08. Media Queries
 ==================================== */
 
 @media screen and (prefers-reduced-motion: reduce) {
-
     html {
         scroll-behavior: auto;
     }
 }
 
 @media (min-width: 375px) {
+    /* Base Styles */
     h1 {
         font-size: 2.5em;
     }
+    /* Header */
     .main-header {
         padding: 2vh;
     }
-
     .main-header, .subheader {
         display: flex;
     }
@@ -395,38 +414,33 @@ header li a:hover {
         align-items: center;
         flex-direction: column;
     }
+    .main-header .menu-item {
+        padding: 0 1.5em 0 0;
+    }
+    #main-navigation {
+        display: none;
+    }
+    /* Footer */
     .main-footer {
         padding: 2vh;
         display: grid;
     }
-
     #site-branding, #site-description {
         text-align: center;
     }
-
     #site-description {
         padding: 0 0 1em 0;
     }
-
     #footer-navigation {
         display: none;
     }
-
-    .main-header .menu-item {
-        padding: 0 1.5em 0 0;
-    }
-
     nav#social-media-links .menu-item, nav#footer-navigation .menu-item {
         padding: 0 0 1em 0;
     }
-
     footer nav {
         text-align: center;
     }
-
-	#main-navigation {
-		display: none;
-	}
+    /* Blocks */
     .wp-block-media-text__media img {
         padding-bottom: 1em;
     }
@@ -434,21 +448,23 @@ header li a:hover {
         gap: 2em;
         margin: 1em 0 0 1em;
     }
+    /* Roadmap Graphic on Now Page */
     a.roadmap img {
         max-width: 95vw;
     }
+    /* Treehouse Graphic on Colophon Page */
     a.treehouse img {
         max-width: 50vw;
     }
 }
 
 @media (min-width: 1025px) {
+    /* Footer */
     .main-footer {
         display: flex;
         align-items: center;
         flex-direction: column;
     }
-
     .main-header, .main-footer {
         flex-direction: row;
         justify-content: space-around;
@@ -465,13 +481,23 @@ header li a:hover {
     #main-navigation {
         display: flex;
     }
+    /* Blocks */
 	.wp-block-columns {
         gap: 2em;
     }
     .wp-block-media-text__media img {
         padding-bottom: 0;
     }
+    /* Treehouse Graphic on Colophon Page */
     a.treehouse img {
         max-width: 10vw;
+    }
+    /* Contact Form on Contact Page */
+    div.contact-form {
+        display: grid;
+        justify-content: center;
+    }
+    div.contact-form form div.wpforms-field-container .wpforms-field-medium {
+        width: 650px;
     }
 }
