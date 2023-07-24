@@ -471,4 +471,7 @@ header li a:hover {
     .wp-block-media-text__media img {
         padding-bottom: 0;
     }
+    a.treehouse img {
+        max-width: 10vw;
+    }
 }
